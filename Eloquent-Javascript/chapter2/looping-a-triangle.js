@@ -42,10 +42,8 @@ const logTriangleWithXRows2 = (numOfRows) => {
 
 const logTriangleWithXRows3 = (numOfRows) => {
     let rowOutput = ''
-    let row = 1
-    while (row <= numOfRows) {
+    while (rowOutput.length < numOfRows) {
         rowOutput += '#'
-        row++
         console.log(rowOutput)
     }
 }
