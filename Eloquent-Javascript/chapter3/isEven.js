@@ -17,6 +17,7 @@ const isEven1 = (num) => {
 const isEven2 = (num) => Math.abs(num) <= 1 ? Math.abs(num) === 0 : isEven2(Math.abs(num) - 2)
 
 // recursive take last number and then subtract that by 2 until you reach 1 or 0
+// could use .shift() here as well to keep things a bit more immutable
 const isEven3 = (num) => {
     let absNum = Math.abs(num);
     if (absNum > 9) {
