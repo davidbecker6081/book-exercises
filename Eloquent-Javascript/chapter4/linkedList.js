@@ -13,24 +13,17 @@ const arrayToList = (arr) => {
     for (let i = arr.length - 1; i >= 0; i--) {
         if (i === 0) {
             list.value = arr[i]
-        }
-        if (i < arr.length - 1 && i !== 0) {
+        } else {
             list.rest = {
                 value: arr[i],
-                rest = list.rest
-            }
-        }
-        if (i === arr.length - 1) {
-            list.rest = {
-                value: arr[i],
-                rest: null
+                rest: list.rest || null
             }
         }
     }
     return list
 }
 
-console.log(arrayToList([1,2,3, 4, 5, 6]))
+console.log(arrayToList([1,2,3]))
 
 // Also write a listToArray function that produces an array from a list. Then add a helper function prepend,
 // which takes an element and a list and creates a new list that adds the element to the front of the input list,
