@@ -74,4 +74,12 @@ const nth = (list, num) => {
     }
 }
 
+const nthRecursive = (list, num, index = 0) => {
+    if (index === num) {
+        return list.value
+    }
+
+    return nthRecursive(list.rest, num, index + 1)
+}
+
 // If you haven’t already, also write a recursive version of nth.
